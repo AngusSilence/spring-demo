@@ -11,6 +11,8 @@ repositories {
 
 dependencies {
     compile 'org.springframework:spring-context:5.3.5'
+    compile 'org.springframework:spring-aop:5.3.5'
+    compile 'org.aspectj:aspectjweaver:1.9.6'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }

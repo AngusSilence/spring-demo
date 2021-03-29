@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Singer implements Artist {
     @Override
-    public void play() {
+    public void play() throws Exception{
         System.out.println("This is a show from a Singer.");
     }
 }

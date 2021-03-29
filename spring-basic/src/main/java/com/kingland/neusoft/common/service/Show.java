@@ -14,12 +14,22 @@ public class Show {
 //    @Autowired
 //    private Artist artist;
 
+    public Show(List<Artist> artists){
+        this.artists = artists;
+    }
+
+
     @Autowired
     private List<Artist> artists;
     public void show(){
 //        artist.play();
         for(Artist artist:artists){
-            artist.play();
+            try {
+                artist.play();
+            }catch (Exception e){
+                System.out.println("This the Exception from Artist");
+            }
+
         }
     }
 

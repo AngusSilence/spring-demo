@@ -9,5 +9,5 @@ public interface Artist {
     /**
      * The play behaviour of a actor
      */
-    void play();
+    void play() throws Exception;
 }
