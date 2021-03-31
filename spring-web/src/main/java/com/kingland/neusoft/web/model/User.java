@@ -4,7 +4,7 @@ package com.kingland.neusoft.web.model;
 import javax.validation.constraints.*;
 
 public class User {
-
+    @Min(1)
     public int id;
     @NotNull
     @Max(120)
@@ -15,7 +15,11 @@ public class User {
     public String name;
     @Email
     public String emailAddress;
+    @Pattern(regexp = "(^[1-9]\\d{5}(19|([23]\\d))\\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\\d{3}[0-9Xx]$)|(^[1-9]\\d{5}\\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\\d{2}[0-9Xx]$)")
     public String idNo;
+
+    public User() {
+    }
 
     public User(int id, @NotNull @Max(120) @Min(0) int age, @NotBlank @Size(max = 20, min = 5) String name,
                 @Email String emailAddress, String idNo) {
