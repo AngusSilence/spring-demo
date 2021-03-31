@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head xmlns:th="http://www.thymeleaf.org"></head>
+<body>
+<h1>The User List</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Detail</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.age}"></td>
+        <td><a th:href="@{/userDetail(userId=${user.id})}">Detail</a></td>
+    </tr>
+    </tbody>
+</table>
+<a th:href="@{/addUser}">Add New User</a>
+</body>
+</html>
