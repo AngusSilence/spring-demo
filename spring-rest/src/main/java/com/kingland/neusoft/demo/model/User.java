@@ -11,7 +11,7 @@ public class User {
     @Min(0)
     public int age;
     @NotBlank
-    @Size(max = 20, min = 5)
+    @Size(max = 20, min = 3)
     public String name;
     @Email
     public String emailAddress;
