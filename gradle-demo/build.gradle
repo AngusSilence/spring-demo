@@ -7,3 +7,18 @@ task myTest{
         println 'Hello world!'
     }
 }
+
+task myTest2{
+    group="Test"
+    dependsOn myTest
+    doLast {
+        println("Hello World 2!")
+    }
+}
+
+tasks.register("myTest3"){
+    doLast{
+        println project.name;
+    }
+}
+
