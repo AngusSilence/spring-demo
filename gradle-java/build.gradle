@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'jacoco'
+    id 'pmd'
 }
 
 group 'org.example'
@@ -17,6 +18,12 @@ dependencies {
 
 test {
     finalizedBy jacocoTestReport // report is always generated after tests run
+}
+
+pmd {
+    consoleOutput = true
+    toolVersion = "6.29.0"
+    ruleSets = ["category/java/errorprone.xml", "category/java/bestpractices.xml"]
 }
 
 jacocoTestReport {
